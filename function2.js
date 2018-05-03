@@ -2,6 +2,7 @@ var palos 	= new Array("Copas", "Bastos", "Oros", "Espadas");
 var valores = new Array("As","2", "3", "4", "5", "6", "7", "Sota", "Caballo", "Rey"); 
 var arrJugadores = new Array();
 var baraja 	= new Array(40);
+
 var manoJugador1 = new Array();
 var manoJugador2 = new Array();
 var manoJugador3 = new Array();
@@ -160,6 +161,7 @@ function CogerCarta( jugador ){
 		}
 		if(1==1){
 			var CartaMano = baraja.pop();
+			document.getElementById("naipe").src = 'images/'+CartaMano.valor.toLowerCase()+'_'+CartaMano.palo.toLowerCase()+'.png';
 		}
 		
 		//console.log(baraja.length);
@@ -167,7 +169,8 @@ function CogerCarta( jugador ){
 		eval('manoJugador'+jugador).push ( CartaMano );
 
 		var txt = CartaMano.valor + ' de ' + CartaMano.palo;
-		function_li( jugador, txt );
+		var img = '<img src="images/'+CartaMano.valor.toLowerCase()+'_'+CartaMano.palo.toLowerCase()+'.png" class="miniCarta" />';
+		function_li( jugador, txt, img );
 		console.log("Baraja: " + baraja.length);
 		console.log(baraja);
 		/*
@@ -235,9 +238,13 @@ function RepartirCarta(){
 	}
 }
 
-function function_li( jugador, txtCarta ) {
+function function_li( jugador, txtCarta, imgCarta ) {
   var ul = document.getElementById("ManoJugador"+jugador);
   var li = document.createElement("li");
-  li.appendChild(document.createTextNode(txtCarta));
+  //document.getElementById("naipe").src = 'images/'+CartaMano.valor.toLowerCase()+'_'+CartaMano.palo.toLowerCase()+'.png';
+  //li.innerHTML = imgCarta + '<p>'+txtCarta+'</p>';
+  li.innerHTML = imgCarta;
+  //li.className = 'miniCarta';
+  li.appendChild(document.createTextNode(''));
   ul.appendChild(li);
 }
