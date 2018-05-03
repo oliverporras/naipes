@@ -132,6 +132,7 @@ function BarajaNueva() {
 	}
 	console.log(baraja);
 	Ganador = 0;
+	MezclarBaraja();
 }
 
 /*Esta función es el constructor de cartas*/
@@ -143,7 +144,7 @@ function CrearCarta(valor, palo) {
 
 function MezclarBaraja(){
 	for ( i=0; i<baraja.length; i++){
-		posicion = Math.floor((Math.random() * baraja.length));
+		posicion = Math.floor((Math.random() * baraja.length-1));
 		//console.log(baraja[posicion].valor);
 		var CartaMano = baraja[posicion];
 		baraja[posicion] = baraja[i];
