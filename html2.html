@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="function2.js"></script>
+</head>
+<body onload="javascript:BarajaNueva();" id="tag_body">
+<fieldset>Jugadores
+	<input type="text" name="NombreJugador" id="NombreJugador" value="" />
+	<button onclick="javascript:NuevoJugador();" >Añadir Jugador</button>
+	<ul id="Jugadores"></ul>
+	<button onclick="javascript:LeerJugadores();" >Leer Jugadores</button>
+	<h3 id="ganador"></h3>
+	<h4 id="cartaganadora"></h4>
+</fieldset>
+<fieldset>Crupier
+	<button onclick="javascript:BarajaNueva();" >Nueva Baraja</button>
+	<button onclick="javascript:MezclarBaraja();" >Mezclar</button>
+	<button onclick="javascript:RepartirCarta();" >Repartir carta</button>
+</fieldset>
+</body>
+</html>
