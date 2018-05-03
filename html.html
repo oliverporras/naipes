@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="function.js"></script>
+</head>
+<body onload="javascript:BarajaNueva();">
+<button onclick="javascript:BarajaNueva();" >Nueva Baraja</button>
+<button onclick="javascript:MezclarBaraja();" >Mezclar</button>
+<button onclick="javascript:RepartirCarta();" >Repartir carta</button>
+<fieldset>Jugador 1 
+	<button onclick="javascript:CogerCarta(1);" >Coger carta</button>
+	<ul id="ManoJugador1">
+	</ul>
+</fieldset>
+<fieldset>Jugador 2 
+	<button onclick="javascript:CogerCarta(2);" >Coger carta</button>
+	<ul id="ManoJugador2">
+	</ul>
+</fieldset>	
+</body>
+</html>
